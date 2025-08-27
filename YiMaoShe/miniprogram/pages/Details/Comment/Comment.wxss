@@ -1,0 +1,175 @@
+.Comment_Detail_Box
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: hidden;
+}
+.Comment_Main_Box
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 100rpx;
+  right: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling:touch;
+}
+.Comment_Title
+{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #212121;
+  border-bottom: 1px solid #ccc;
+  margin-left: 24rpx;
+  padding: 8rpx 0;
+  font-family: Microsoft YaHei;
+}
+.Input_Box
+{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right: 0;
+  background-color: #EAE8E8;
+  border-top:1rpx solid #D5D5D5;
+  min-height: 100rpx;
+  z-index: 1000;
+}
+.Input_Box .Send_Msg_Box
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 20rpx 0;
+}
+.Input_Box .Input_Item
+{
+  margin:0 0rpx;
+  flex: 1;
+  width: 0%;
+  position: relative;
+}
+.Input_Box .Input_Item .Input
+{
+  border: 1rpx solid #D5D5D5;
+  background-color: #fff;
+  border-radius: 3px;
+  line-height: 65rpx;
+  margin:5rpx 0 5rpx 75rpx ;
+  font-size: 24rpx;
+  color: #838383;
+  padding: 0 2%;
+}
+.Input_Box .Input_Item .Keyboard_Input
+{
+  width: auto;
+  max-height: 500rpx;
+  height: 65rpx;
+  word-break:break-all;
+  overflow:auto;
+}
+.Input_Box .Input_Item .Comment_Icon
+{
+  position: absolute;
+  left:5rpx;
+  top:6rpx;
+}
+.Input_Box .Add_icon
+{
+  margin:0 5rpx;
+  height: 65rpx;
+  width: 65rpx;
+  transform: scale(0.9);
+  margin-top: 2px;
+}
+.Input_Box .Submit_Btn
+{
+  font-size: 24rpx;
+  margin-top: 5rpx;
+  margin-right: 8rpx;
+  line-height: 60rpx;
+  width: 120rpx;
+  height: 60rpx;
+  background-color: #4A6141;
+  border-radius:5rpx;
+  color: #fff;
+  text-align: center;
+  font-family:Microsoft Yahei;
+}
+.Input_Box .Send_More_Box
+{
+  margin: 20rpx 35rpx 35rpx 35rpx;
+}
+.Send_More_Btns_Main
+{
+
+}
+.Send_More_Box .More_Btn_Item
+{
+  display: inline-block;
+  width: 110rpx;
+  height: 145rpx;
+  margin-right: 35rpx;
+  text-align: center;
+}
+.More_Btn_Main
+{
+  width: 100%;
+  height:60rpx;
+  text-align: center;
+  border:1px solid #D5D5D5;
+  border-radius: 10rpx;
+  background-color: #fbfbfc;
+  margin: 0 auto;
+  padding:25rpx 0
+}
+.More_Btn_Main image
+{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.Send_More_Result_Main
+{
+  margin-top: 30rpx;
+}
+.Send_More_Result_Main .File_Box
+{
+  margin-right: 14rpx;
+  height: 160rpx;
+  width: 160rpx;
+  position: relative;
+  display: inline-block;
+}
+.Send_More_Result_Main .File_Box .Deleting{
+  animation:deleting 0.5s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes Deleting {
+  0%{
+      transform: scale(1);
+  }
+  100%{
+      transform: scale(0);
+  }
+}
+.Send_More_Result_Main .File_Box .Img_Box
+{
+  height: 100%;
+  width: 100%;
+}
+.Send_More_Result_Main image
+{
+  height: 100%;
+  width: 100%;
+}
+.Send_More_Result_Main .Remove_Icon
+{
+  position: absolute;
+  right: 5rpx;
+  top: 5rpx;
+}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "PublishBoxes":"../../Components/PublishBoxes/PublishBoxes"
+  }
+}

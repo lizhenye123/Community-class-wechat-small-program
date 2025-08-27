@@ -1,0 +1,48 @@
+.Content
+{
+  margin-top: 20rpx;
+}
+
+.Tag_Title 
+{
+  font-size: 32rpx;
+  margin: 0rpx 8rpx;
+}
+.Tag_List 
+{
+  margin-left: -14rpx; 
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-between;
+  height: 80rpx;
+  margin-top: 6rpx;
+}
+.Tag 
+{
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  font-size: 28rpx;
+  color: gray;
+  padding: 6rpx 16rpx;
+  margin: 10rpx 20rpx 10rpx 20rpx;
+  word-break: keep-all;
+}
+.Arrow_Right 
+{
+  margin-left: auto;
+  width: 48rpx; 
+  height: 48rpx;
+  min-width: 48rpx;
+  max-width: 48rpx;
+}
+.ModuleSelect
+{
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 10rpx;
+}
+.Sort_Content
+{
+  justify-content: center;
+  margin: auto;
+}

@@ -1,0 +1,134 @@
+/* Components/PublishBoxes/PublishBoxes.wxss */
+.Publish_Content_Item{
+  padding-bottom: 20rpx;
+  border-bottom: 5rpx rgb(240, 242, 243) solid ;
+}
+.User_Info{
+  width: 88%;
+  margin: auto;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10rpx;
+}
+.User_Avatar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.User_Info .User_Info_Image{
+  width: 100rpx;
+  border-radius: 50%;
+}
+.User_Detail{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  justify-content: space-between;
+  margin-left: 10rpx;
+}
+.User_Name{
+  font-weight: 800;
+  color: cadetblue;
+}
+.Publish_Flag{
+  display: flex;
+  flex-direction: row;
+}
+.Publish_Flag .Publish_Flag_View{
+  font-weight: 100;
+  color: white;
+  font-size: 20rpx;
+  margin-right: 10rpx;
+  padding: 5rpx;
+  border-radius: 4rpx;
+}
+.MainModule{
+  background-color: burlywood;
+}
+.SubModule{
+  background-color: cornflowerblue;
+}
+.IsVideo{
+  background-color:darkseagreen
+}
+.Post_Detail{
+  display: block;
+  width: 200rpx;
+}
+.Handle{
+  padding-left: 170rpx;
+}
+.Handle .Handle_Image{
+  width: 35rpx;
+  height: 35rpx;
+  text-align: right;
+}
+.Post_Time{
+  display: block;
+  float: right;
+}
+.Post_Time .Post_Time_Text{
+  font-size: 22rpx;
+  color: #a09c9c;
+}
+.Sort_Content_Middle{
+  width: 88%;
+  margin: auto;
+  padding: 10rpx;
+  text-align: center;
+}
+.Acticle_Text{
+  word-wrap: break-word;
+  font-size: 30rpx;
+  display: -webkit-box;
+  text-align: left;
+  overflow: hidden;
+  margin-left: 7rpx;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  letter-spacing: 5rpx;
+}
+.Acticle_Image{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.Show_Image{
+  width: 28vw;
+  height: 28vw;
+  margin: 7rpx 8rpx 7rpx 2rpx;
+}
+.Show_Image .Show_Image_Image{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 5rpx;
+  border-radius: 10rpx;
+}
+.Publish_Content_Bottom{
+  height: 52rpx;
+  width: 90%;
+  display: flex;
+  align-content: center;
+  margin: auto;
+  justify-content: flex-end;
+}
+.Like{
+  line-height: 52rpx;
+}
+.Botting_Img{
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+}
+.Num{
+  padding-left: 6rpx;
+  font-size: 25rpx;
+}
+.Comment{
+  margin-left: 20rpx;
+  line-height: 52rpx;
+}

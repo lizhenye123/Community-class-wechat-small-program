@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/Main/Main",
+    "pages/Details/Comment/Comment",
+    "pages/Details/Details",
+    "pages/Login/Login",
+    "pages/Publish/Publish",
+    "pages/Module/Cat/Cat",
+    "pages/My/My",
+    "pages/My/MyPublish/MyPublish",
+    "pages/Module/Breeding/Breeding",
+    "pages/Module/CatFood/CatFood",
+    "pages/Module/Medical/Medical",
+    "pages/My/LikePublish/LikePublish",
+    "pages/My/Platform/Platform",
+    "pages/My/Suggest/Suggest",
+    "pages/Details/Report/Report"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "议猫社",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/Main/Main",
+        "text": "主页",
+        "iconPath": "images/Home.png",
+        "selectedIconPath": "images/HomeActive.png"
+      },
+      {
+        "pagePath": "pages/Publish/Publish",
+        "text": "发布",
+        "iconPath": "images/Publish.png",
+        "selectedIconPath": "images/PublishActive.png"
+      },
+      {
+        "pagePath": "pages/My/My",
+        "text": "我的",
+        "iconPath": "images/My.png",
+        "selectedIconPath": "images/MyActive.png"
+      }
+    ]
+  },
+  "requiredPrivateInfos": [
+    "choosePoi",
+    "chooseAddress",
+    "chooseLocation"
+  ]
+}

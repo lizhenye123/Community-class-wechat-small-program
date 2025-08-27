@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "CommentBoxes":"../../../Components/CommentBoxes/CommentBoxes"
+  }
+}

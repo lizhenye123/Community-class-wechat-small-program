@@ -1,0 +1,16 @@
+<view class="Content">
+  <view class="Tag_Title">选择要查看的类型</view>
+  <picker mode="selector" range="{{Classs}}" bindchange="HandleSelectClass">
+    <view class="Tag">
+      {{CurrentSelectClass}}
+    </view>
+  </picker>
+  <view class="Split_Line"></view>
+
+  <scroll-view class="Scroll_Module" scroll-y='{{true}}' scroll-with-animation='{{true}}' 	enable-back-to-top='{{true}}' 	refresher-background='rgba(0, 0, 0, 0.5)' enable-flex="true">
+    <view class="Module_Item" wx:for="{{CurrentClassPublish}}" wx:key="index">
+      <PublishBoxes wx:if="{{CurrentSelectClass === '全部'? true: item.ModuleSelectClass === CurrentSelectClass}}" Publish="{{item}}" bind:tap="HandleOpenPublishClick" data-Publish="{{item}}" />
+    </view>
+  </scroll-view>
+
+</view>

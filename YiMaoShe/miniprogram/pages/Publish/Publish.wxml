@@ -1,0 +1,76 @@
+<view class="Content">
+  <view class="Content_Input">
+    <!-- 输入内容 -->
+    <view>
+      <textarea value="{{Content}}" class="Text_Input" auto-focus="{{true}}" bindinput="HandleTextInput" maxlength="500" placeholder="请输入文本内容" auto-height="{{true}}"/>
+    </view>
+
+    <!-- 图片展示 -->
+    <view class="Image_List" wx:if="{{ImageList.length>0}}">
+
+      <view class="Show_Image Box" wx:for="{{ImageList}}" wx:key="item">
+        <view class="Delete">
+          <image src="../../images/Publish/Delete.png" data-ImageID="{{index}}" bind:tap="HandleDeleteImage"/>
+        </view>
+        <image class="Show_Image Box" src="{{item}}" mode="aspectFill" data-ImageID="{{index}}" bind:tap="HandleThisImage"/>
+      </view>
+
+      <view class="AddImage" wx:if="{{ImageList.length<9}}">
+        <image src="../../images/Publish/Plus.png" bind:tap="HandleChooseImage"/>
+      </view>
+    </view>
+
+    <!-- 视频展示 -->
+    <view class="Video Box" wx:if="{{Video && Video.tempFilePath}}">
+      <view class="Delete">
+        <image src="../../images/Publish/Delete.png"  data-VideoID="{{index}}" bind:tap="HandleDeleteVideo"/>
+      </view>
+      <video src="{{Video.tempFilePath}}" object-fit="cover" show-fullscreen-btn="{{false}}"/>
+    </view>
+
+    <!-- 上传照片 -->
+    <view class="Line"></view>
+    <view class="ToUpload">
+      <view class="UploadIcon">
+        <image src="../../images/Publish/Photos.png" bind:tap="HandleChooseImage"/>
+      </view>
+
+      <view class="UploadIcon">
+        <image src="../../images/Publish/Video.png" bind:tap="HandleChooseVideo"/>
+      </view>
+    </view>
+
+    <!-- 上传位置 -->
+    <view>
+      <view class="Line"></view>
+      <view class="Horizontal" bind:tap="HandleChooseLocation">
+        <view class="Tag_Title"> {{Location.LocationName && Location.LocationName.length>0?Location.LocationName:'选择位置'}} </view>
+        <image class="Arrow_Right" wx:if="{{Location.LocationName && Location.LocationName.length>0}}" catch:tap="HandleDeleteLocation" src="../../images/Publish/Clear.png" />
+        <image class="Arrow_Right" wx:if="{{!Location.LocationName}}" src="../../images/Publish/Clear.png" />
+      </view>
+    </view>
+
+    <!-- 模块选择 -->
+    <view wx:if="{{Publishs.length > 0}}" >
+      <view class="Line"></view>
+      <view class="Tag_Title">选择发布的模块</view>
+      <scroll-view class="Tag_List " scroll-x="{{true}}" scroll-with-animation="{{true}}" enable-flex="true">
+        <view class="Tag ModuleSelect" bind:tap="HandleModuleSelect" style="{{index == CurrentSelectModuleIndex?'color:'+SelectStyle.TabColor+';border-color:'+SelectStyle.TabColor:''}}" wx:for="{{Publishs}}" data-ModuleID="{{index}}" wx:key="index">
+        {{item}}
+        </view>
+      </scroll-view>
+      <view class="Tag_Title" >选择具体类型</view>
+      <picker mode="selector" range="{{CurrentSelectModule}}" bindchange="HandleSelectClass">
+        <view class="Tag">
+          {{CurrentSelectClass}}
+        </view>
+      </picker>
+    </view>
+
+    <!-- 发布 -->
+    <button class="PublishButton" type="primary" bind:tap="HandlePublishClick">
+      <text class="PublishButtonText">发布</text>
+    </button>
+
+  </view>
+</view>

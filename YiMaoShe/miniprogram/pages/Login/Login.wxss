@@ -1,0 +1,21 @@
+.Avatar_Wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.Avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+.InputName{
+	margin-left: 20rpx;
+	display: flex;
+	padding-bottom: 60rpx;
+}
+.SubmitButton{
+	text-align: center;
+}

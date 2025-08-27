@@ -1,0 +1,60 @@
+<view class="Publish_Content_Item">
+  <view class="Publish_Content_Top">
+    
+    <!-- 用户头像名字 -->
+    <view class="User_Info">
+      <view class="User_Avatar">
+        <image class="User_Info_Image" src="{{UserInfo.AvatarUrl}}" mode="widthFix"/>
+      </view>
+      <view class="User_Detail">
+        <view class="User_Name">
+          <text>{{UserInfo.UserName}}</text>
+        </view>
+
+        <!-- 发布的标签 -->
+        <view class="Publish_Flag"> 
+          <view class="MainModule Publish_Flag_View">{{Publish.PublishModule}}</view>
+          <view class="SubModule Publish_Flag_View">{{Publish.ModuleSelectClass}}</view>
+          <view class="IsVideo Publish_Flag_View" wx:if="{{bIsVideo}}">视频展示</view>
+        </view>
+      </view>
+
+      <view class="Post_Detail">
+        <view class="Handle">
+          <image class="Handle_Image" src="../../images/Common/More.png"/>
+        </view>
+        <view class="Post_Time">
+          <text class="Post_Time_Text">{{PublishTime}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 文章内容 -->
+  <view class="Sort_Content_Middle">
+    <view class="Acticle_Text">
+      <text>{{Content}}</text>
+    </view>
+    <view class="Acticle_Image">
+      <block wx:for="{{ImageList}}" wx:key="item">
+        <view class="Show_Image">
+          <image class="Show_Image_Image" src="{{item}}" mode="aspectFill"/>
+        </view>
+      </block>
+    </view>
+
+    <!-- 点赞 -->
+    <view class="Publish_Content_Bottom">
+      <view class="Like">
+        <image class="Botting_Img" src="{{LikeIconUrl}}"/>
+        <text class="Num">{{LikeUsers.LikeUsers.length}}</text>
+      </view>
+      <view class="Comment">
+        <image class="Botting_Img" src="../../images/Common/comment.png" />
+        <text class="Num">{{CommentUsers.CommentUsers.length}}</text>
+      </view>
+    </view>
+
+  </view>
+</view>

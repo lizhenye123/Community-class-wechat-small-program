@@ -1,0 +1,21 @@
+<view class="Comment_Item">
+  <view class="Comment_Item_Header">
+    <view class="Left_Img">
+      <image src="{{Comment.UserAvatar}}"></image>
+    </view>
+    <view class="Right_User">
+      <text class="User_Name">{{Comment.UserName}}</text>
+    </view>
+  </view>
+  <view class="Comment_Body">
+    <view class="Comment_Txt" wx:if="{{Comment.Content}}">
+      <text>{{Comment.Content}}</text>
+    </view>
+    <view class="Comment_Img" wx:if="{{Comment.ImageList.length!=0}}">
+      <block wx:for="{{Comment.ImageList}}" wx:key="index">
+        <image class="Comment_Img_Image" src="{{item}}" mode="aspectFill" catch:tap="HandlePreviewImage" data-ImageIndex="{{index}}"></image>
+      </block>
+    </view>
+  </view>
+  <view class="Comment_Time">{{Time}}</view>
+</view>

@@ -1,0 +1,52 @@
+<view class="Comment_Detail_Box">
+  <view class="Comment_Main_Box">
+    <view class="Comment_Title"> 评论………（共{{Comments.CommentUsers.length}}条)</view>
+    <block wx:for="{{Comments.CommentUsers}}" wx:key="item">
+      <CommentBoxes Comment="{{item}}"/>
+    </block>
+  </view>
+
+  <view class="Input_Box">
+    <!-- 输入 -->
+    <view class="Send_Msg_Box">
+      <view class="Input_Item">
+        <input class="Input Keyboard_Input"  value="{{KeyboardInputValue}}" bindconfirm="HandleSubmitComment" bindinput="HandleCommentInput" placeholder="记录点什么吧……" />
+      </view>
+      <image class="Comment_Icon Add_icon" src="../../../images/Common/Add.png" catchtap="HandleSendMoreMsg"></image>
+      <view class="Submit_Btn" catchtap="HandleSubmitComment">发送</view>
+    </view>
+
+    <!--选择图片和拍照的按钮-->
+    <view class="Send_More_Box" hidden="{{!bSendMoreMsgFlag}}">
+      <view class="Send_More_Btns_Main">
+        <view class="More_Btn_Item" catchtap="HandleChooseImage" data-category="album">
+          <view class="More_Btn_Main">
+            <image src="../../../images/Common/Image.png"></image>
+          </view>
+          <text>照片</text>
+        </view>
+        <view class="More_Btn_Item" catchtap="HandleChooseImage" data-category="camera">
+          <view class="More_Btn_Main">
+            <image src="../../../images/Common/Camera.png"></image>
+          </view>
+          <text>拍照</text>
+        </view>
+      </view>
+
+      <!--显示选择的图片-->
+      <view class="Send_More_Result_Main" hidden="{{ImageList.length==0}}">
+        <block wx:for="{{ImageList}}" wx:key="item">
+
+          <!--如果删除其中一个，则对其添加Deleting 样式；-->
+          <view class="File_Box {{DeleteIndex==index?'Deleting':''}}">
+            <view class="Img_Box">
+              <image src="{{item}}" mode="aspectFill"></image>
+              <icon class="Remove_Icon" type="cancel" size="23" color="#B2B2B2" catchtap="HandleDeleteImage" data-index="{{index}}" />
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  
+  </view>
+</view>

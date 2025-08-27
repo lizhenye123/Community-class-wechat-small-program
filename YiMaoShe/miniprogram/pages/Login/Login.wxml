@@ -1,0 +1,10 @@
+<form bindsubmit="Submit">
+	<button class = "Avatar_Wrapper" open-type="chooseAvatar" bind:chooseavatar="HandleChooseAvatar">
+		<image class="Avatar" src="{{AvatarUrl}}"/>
+	</button>
+	<view class="InputName">
+		<text>昵称：</text>
+		<input type="nickname" class="WeUI_Input" placeholder="请输入昵称" name="UserName"/>
+	</view>
+	<button class="SubmitButton" form-type="submit" type="primary">注册</button>
+</form>

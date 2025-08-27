@@ -1,0 +1,23 @@
+<view class="Content">
+  <view class="Tag_Title">选择举报的类型</view>
+
+  <picker mode="selector" range="{{Classs}}" bindchange="HandleSelectClass">
+    <view class="Tag">
+      {{CurrentSelectClass}}
+    </view>
+  </picker>
+  <view class="Split_Line"></view>
+
+  <!-- 输入内容 -->
+  <view class="Content_Input">
+    <view>
+      <textarea value="{{Content}}" class="Text_Input" auto-focus="{{true}}" bindinput="HandleTextInput" maxlength="300" placeholder="请输入举报的具体内容" auto-height="{{true}}"/>
+    </view>
+  </view>
+
+  <!-- 提交 -->
+  <button class="PublishButton" type="primary" bind:tap="HandleReportClick">
+    <text class="PublishButtonText">提交</text>
+  </button>
+  
+</view>

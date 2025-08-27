@@ -1,0 +1,154 @@
+.Container{
+  display: flex;
+  flex-direction: column;
+}
+
+.Author_Date{
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+.Avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  float: left;
+}
+.UserInfo{
+  display: inline-block;
+}
+.Author{
+  margin-left: 15rpx;
+  margin-top: 15rpx;
+  align-items: center;
+  font-size: 13px;
+  width: 100%;
+}
+.Const_Text{
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 20rpx;
+}
+.Title_Text{
+  font-size: 24rpx;
+  margin-left: 15rpx;
+
+  vertical-align: middle;
+  color: #999;
+}
+.Flag_Container
+{
+  display: flex;  
+  align-items: center;   
+  justify-content: space-between; 
+  margin-left: 30rpx;
+}
+.Publish_Flag {  
+  display: flex; /* 应用 flexbox 布局 */  
+  flex-direction: row; /* 子元素水平排列 */  
+  align-items: center; /* 子元素垂直居中对齐 */  
+}  
+.Publish_Flag view{
+  font-weight: 100;
+  color: white;
+  font-size: 24rpx;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+  padding: 5rpx;
+  border-radius: 4rpx;
+}
+.MainModule{
+  background-color: burlywood;
+}
+.SubModule{
+  background-color: cornflowerblue;
+}
+.IsVideo{
+  background-color:darkseagreen
+}
+
+.Horizon{
+  width: 660rpx;
+  height: 1px;
+  background: #e5e5e5;
+  position: relative;
+  top: 46rpx;
+  margin: 0 auto;
+  z-index: -99;
+}
+.Detail{
+  color: #666;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-right: 30rpx;
+  line-height: 44rpx;
+  letter-spacing: 5rpx;
+  text-indent: 2em;
+  font-size: 35rpx;
+}
+.Image_List
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.Show_Image
+{
+  width: 28vw;
+  height: 28vw;
+  margin: 6rpx 10rpx 10rpx 10rpx;
+}
+.ShowImage image
+{
+  width: 100%;
+  height: 100%;
+}
+.Video 
+{
+  width: 60vw;
+  height: 60vw;
+}
+.Video video 
+{
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.Box
+{
+  box-sizing: border-box;
+  position: relative;
+}
+.Tool_Other{
+  height: 64rpx;
+  text-align: right;
+  line-height: 64rpx;
+  margin: 30rpx;
+
+}
+.Tool_Other_Item{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 0rpx;
+}
+.Tool_Other_Item_Like{
+  margin-right: 15rpx;
+}
+.Tool_Other_Item image{
+  height: 60rpx;
+  width: 60rpx;
+  vertical-align: -3px; 
+  margin-right: 0rpx;
+}
+
+.Number{
+  font-size: 24rpx;
+  margin-left: 5rpx;
+  vertical-align: middle;
+  color: #999;
+}
+.Report
+{
+  margin-left: 10rpx;
+}

@@ -1,0 +1,31 @@
+<view class="Content" style="margin-top: {{10}}rpx;">
+  <!-- 个人信息 -->
+  <view class="Top">
+    <view class="User_Info">
+      <!-- 头像 -->
+      <view class="User_Avatar">
+        <image src="{{UserInfo.UserAvatar}}"/>
+      </view>
+
+      <!-- 用户名，标签 -->
+      <view class="User_Tag">
+        <view class="User_Name">
+          <text class="User_Name_Text">{{UserInfo.UserName}}</text>
+        </view>
+        <view class="User_Flag">
+          <view class="RegisterTime">注册时间：{{UserInfo.RegisterTime}}</view>
+          <view class="UserID">{{UserInfo._openid}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="Bottom">
+    <view class="Bottom_Content" wx:for="{{Module}}" wx:key="index">
+        <view class="Me_About" bind:tap="HandleModuleClick" data-OpenUrl="{{item}}">
+            <text>{{item.Title}}</text>
+            <image class="Me_About_Image" src="../../images/Common/Next.png"></image>
+        </view>
+    </view>
+  </view>
+</view>

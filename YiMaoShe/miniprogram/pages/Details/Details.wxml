@@ -1,0 +1,68 @@
+<view class="Container">
+  <block>
+    <!-- 头像 -->
+    <view class="Author_Date">
+
+      <image src="{{UserInfo.AvatarUrl}}" class="Avatar"></image>
+      <view class="UserInfo">
+        <text class="Author">{{UserInfo.UserName}}</text>
+        <text class="Const_Text">发表于</text>
+        <text class="Title_Text">{{PublishTime}}</text>
+      </view>
+      <view class="userinfo">
+        <text class="Title_Text">{{Publish.Location.LocationName}}</text>
+      </view>
+
+
+    </view>
+    <!-- 标签 -->
+    <view class="Flag_Container">
+      <view class="Publish_Flag">
+        <view class="MainModule">{{Publish.PublishModule}}</view>
+        <view class="SubModule">{{Publish.ModuleSelectClass}}</view>
+        <view class="IsVideo" wx:if="{{Publish.Video.length>0}}">视频展示</view>
+      </view>
+    </view>
+
+    <!-- 横线 -->
+    <view class="Tool">
+      <view class="Split_Line"></view>
+    </view>
+    <!-- 文章内容 -->
+    <text class="Detail">{{Publish.Content}}</text>
+
+    <!-- 图片展示 -->
+    <view class="Image_List" wx:if="{{Publish.ImageList.length>0}}">
+      <view class="Show_Image Box" wx:for="{{Publish.ImageList}}" wx:key="item">
+        <image class="Show_Image Box" src="{{item}}" mode="aspectFill" data-ImageID="{{index}}" bind:tap="HandleThisImage" />
+      </view>
+    </view>
+
+    <!-- 视频展示 -->
+    <view class="Video Box" wx:if="{{Publish.Video.length>0}}">
+      <video src="{{Publish.Video}}" object-fit="cover" show-fullscreen-btn="{{false}}" />
+    </view>
+    <!-- 横线 -->
+    <view class="Tool">
+      <view class="Split_Line"></view>
+    </view>
+  </block>
+</view>
+
+
+
+<view class='Tool_Other'>
+  <view class='Tool_Other_Item Tool_Other_Item_Like' bind:tap="HandleLikeClick">
+    <image src='{{LikeIconUrl}}'></image>
+    <text class="Number">{{Likes.LikeUsers.length}}</text>
+  </view>
+
+  <view class='Tool_Other_Item' bind:tap="HandleCommentClick">
+    <image src='/images/Common/comment.png  '></image>
+    <text class="Number">{{Comments.CommentUsers.length}}</text>
+  </view>
+
+  <view class='Tool_Other_Item Report' bind:tap="HandleReportClick">
+    <image src='/images/Common/Report.png  '></image>
+  </view>
+</view>

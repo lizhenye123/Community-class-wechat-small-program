@@ -1,0 +1,32 @@
+.Content
+{
+
+}
+.Tag_Title 
+{
+  font-size: 32rpx;
+  margin: 0rpx 8rpx;
+}
+.Tag_List 
+{
+  margin-left: -14rpx; 
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-between;
+  height: 80rpx;
+  margin-top: 6rpx;
+}
+.Tag 
+{
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  font-size: 28rpx;
+  color: gray;
+  padding: 6rpx 16rpx;
+  margin: 10rpx 20rpx 10rpx 20rpx;
+  word-break: keep-all;
+}
+.Scroll_Module
+{
+  color: gray;
+}

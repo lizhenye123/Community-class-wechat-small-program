@@ -1,0 +1,45 @@
+.Content
+{
+  margin-top: 20rpx;
+}
+.Tag_Title 
+{
+  font-size: 32rpx;
+  margin: 0rpx 8rpx;
+}
+.Tag 
+{
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  font-size: 28rpx;
+  color: gray;
+  padding: 6rpx 16rpx;
+  margin: 10rpx 20rpx 10rpx 20rpx;
+  word-break: keep-all;
+}
+.Content_Input
+{
+  background-color:floralwhite;
+  margin-bottom: 0rpx;
+  position: relative;
+  padding: 18rpx 24rpx;
+  
+}
+.Text_Input 
+{
+  height: 250rpx;
+  width: 100%;
+  min-height: 250rpx;
+  max-height: 400rpx;
+  z-index: 998;
+  margin: 0rpx 8rpx;
+}
+.PublishButton
+{
+  line-height: 60rpx;
+  text-align: center;
+}
+.PublishButtonText
+{
+  text-align: center;
+}

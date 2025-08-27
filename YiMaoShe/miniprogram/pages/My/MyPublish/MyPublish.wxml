@@ -1,0 +1,20 @@
+<view class="Content">
+  <!-- 模块选择 -->
+  <view wx:if="{{MainModule.length > 0}}" >
+    <view class="Line"></view>
+    <scroll-view class="Tag_List " scroll-x="{{true}}" scroll-with-animation="{{true}}" enable-flex="true">
+      <view class="Tag ModuleSelect" bind:tap="HandleModuleSelect" wx:for="{{MainModule}}" data-ModuleID="{{index}}" wx:key="index" style="{{index == CurrentSelectModuleIndex?'color:'+SelectStyle.TabColor+';border-color:'+SelectStyle.TabColor:''}}" >
+        {{item}}
+      </view>
+    </scroll-view>
+
+  </view>
+
+  <view class="Split_Line"></view>
+  <view class="Sort_Content">
+    <black wx:for="{{CurrentPublishs}}" wx:key="_id">
+      <PublishBoxes Publish="{{item}}" bind:tap="HandleOpenPublishClick" data-Publish="{{item}}"/>
+    </black>
+  </view>
+
+</view>

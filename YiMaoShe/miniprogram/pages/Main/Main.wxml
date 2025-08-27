@@ -1,0 +1,36 @@
+<view class="HomePage">
+  <!-- 广告位论播图 -->
+  <view class="Publicity">
+    <swiper class="Swiper" autoplay="{{true}}" circular="{{true}}" interval="3000" easing-function="easeOutCubic" indicator-dots="{{true}}" indicator-color="#999" indicator-active-color="#00C3FFFF" >
+      <swiper-item class="Swiper_Item" wx:for="{{SwiperPublicitys}}" wx:key="index">
+        <label>
+          <image class="Swiper" mode='aspectFill' src="{{item.PublicityUrl}}" />
+          <button class="Swiper_Item_button" bind:tap="HandlePublicityClick" data-OpenUrl="{{item.OpenUrl}}" plain="true"></button>
+        </label>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 各个模块 -->
+  <scroll-view class="Module" scroll-x='{{true}}' scroll-with-animation='{{true}}' enable-flex="true">
+    <view class="Module_Item" wx:for="{{Module}}" wx:key="index">
+      <label>
+        <image class="Module_Item_Image" src="{{item.IconUrl}}" mode="widthFix" lazy-load="{{true}}" bind:tap="HandleOpenModuleClick" data-OpenUrl="{{item.OpenUrl}}"/>
+        <text class="Module_Item_Text">{{item.ModuleName}}</text>
+      </label>
+    </view>
+  </scroll-view>
+
+  <view class="Mess_sort">
+    <view class="Leave_Message">
+      <image class="Message_image" src="../../images/Common/Message.png"/>
+      <text class="Message_Name">最新咨询</text>
+    </view>
+  </view>
+
+  <view class="Sort_Content">
+    <block wx:for="{{Publishs}}" wx:key="_id" bind:tap="HandleOpenPublishClick" > 
+      <PublishBoxes Publish="{{item}}" bind:tap="HandleOpenPublishClick" data-Publish="{{item}}"/>
+    </block>
+  </view>
+</view>

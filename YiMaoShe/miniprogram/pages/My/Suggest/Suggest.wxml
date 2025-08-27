@@ -1,0 +1,13 @@
+<view class="Content">
+  <view class="Content_Input">
+    <!-- 输入内容 -->
+    <view>
+      <textarea value="{{Content}}" class="Text_Input" auto-focus="{{true}}" bindinput="HandleTextInput" maxlength="300" placeholder="请输入文本内容" auto-height="{{true}}"/>
+    </view>
+  </view>
+
+  <!-- 发布 -->
+  <button class="PublishButton" type="primary" bind:tap="HandlePublishClick">
+      <text class="PublishButtonText">提交反馈</text>
+    </button>
+</view>
