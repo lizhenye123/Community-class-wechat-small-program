@@ -45,7 +45,7 @@
 3. 将 `YiMaoShe/project.config.json` 中的 `appid` 替换为你自己的 AppID。
 4. 在 `YiMaoShe/miniprogram/envList.js` 中配置你自己的云环境 ID。
 
-仓库中的 AppID 和云环境 ID 是原项目配置，不能保证仍然可用，也不代表当前项目提供可直接访问的线上服务。
+为避免公开原项目配置，仓库中的 AppID 和云环境 ID 已清空；下载后请填入你自己的配置。项目也不提供可直接访问的线上服务。
 
 ### 3. 配置云开发
 
